@@ -1,6 +1,6 @@
 
-from src.recoleccion_de_datos_automaticos.collector import Collector
-from src.recoleccion_de_datos_automaticos.logger import Logger
+from collector import Collector
+from logger import Logger
 import pandas as pd
 
 
