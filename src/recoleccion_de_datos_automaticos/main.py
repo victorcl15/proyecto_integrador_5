@@ -3,8 +3,9 @@ import pandas as pd
 
 
 def main():
+    logger = Logger()
     df = pd.DataFrame()
-    collector = Collector()
+    collector = Collector(logger)
 
     df = collector.collector_data()
     df.to_csv("./src/recoleccion_de_datos_automaticos/static/data/riot_data.csv")
