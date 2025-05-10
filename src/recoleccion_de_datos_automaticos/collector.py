@@ -49,6 +49,4 @@ class Collector:
             return df
         except Exception as error:
             self.logger.error("Collector", "collect_data", f"Error de conexión: {e}")
-
-         
         
