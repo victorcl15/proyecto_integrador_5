@@ -38,4 +38,3 @@ class Logger:
         self.logger.error(
             description,
             extra={'class_name': class_name, 'function_name': function_name}
-        )

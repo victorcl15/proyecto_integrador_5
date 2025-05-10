@@ -1,21 +1,16 @@
-
-from collector import Collector
 from logger import Logger
+from collector import Collector
 import pandas as pd
 
 
 def main():
-    """Función principal para ejecutar el script de recolección de datos."""
     logger = Logger()
-    collector = Collector(logger)
     df = pd.DataFrame()
-    df = collector.collect_data()
-    if df is not None:
-        print(df)
+    logger.info('Main','main','Inicializar clase Logger')
+    collector = Collector(logger=logger)
 
-
-
-
+    df = collector.collector_data()
+    df.to_csv("./src/recoleccion_de_datos_automaticos/static/data/riot_data.csv")
 
 
 
