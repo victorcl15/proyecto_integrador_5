@@ -1,12 +1,13 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
+from logger import Logger
 import os
 
 class Collector:
     def __init__(self, logger):
-        self.logger = logger
         self.url='https://es.finance.yahoo.com/quote/RIOT/history/' 
+        self.logger = logger
         if not os.path.exists('./src/recoleccion_de_datos_automaticos/static'):
             os.makedirs('./src/recoleccion_de_datos_automaticos/static', exist_ok=True)
 
@@ -16,7 +17,6 @@ class Collector:
 
     def collector_data(self):
         try:
-            self.logger.info("Collector", "collect_data", "Iniciando la recolección de datos...")
             df = pd.DataFrame()
             headers= {
              'User-Agent':'Mozilla/5.0'
@@ -49,6 +49,6 @@ class Collector:
             return df
         except Exception as error:
             self.logger.error("Collector", "collect_data", f"Error de conexión: {e}")
-            
+
          
         
