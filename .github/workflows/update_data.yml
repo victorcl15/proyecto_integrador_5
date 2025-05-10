@@ -30,7 +30,7 @@ jobs:
         python-version: '3.12'
 
     # Instala las dependencias del proyecto
-    - name: paso4 - instalar dependencias
+    - name: Instalar dependencias
       run: pip install -e .
     
     # Corre el script de main
