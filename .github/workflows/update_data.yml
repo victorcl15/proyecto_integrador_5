@@ -30,16 +30,10 @@ jobs:
         python-version: '3.12'
 
     # Instala las dependencias del proyecto
-    - name: actualizar pip
-        run: pip install --upgrade pip
-    - name: instalar dependencias
-        run: pip install -e .
+    - name: Instalar dependencias
+      run: python proyecto_integrador_5/setup.py
+   
+    # Corre el script de main
     - name: Ejecutar Script de main
-        run: python src/edu_piv/main.py
-
-
-    # Corre el script de logger.py
-    - name: Run Logger script
-      run: |
-        python src/recoleccion_de_datos_automaticos/main.py
+      run: python src/recoleccion_de_datos_automaticos/main.py
 
