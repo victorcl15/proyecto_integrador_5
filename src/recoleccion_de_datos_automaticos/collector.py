@@ -6,7 +6,7 @@ import os
 
 class Collector:
     def __init__(self, logger):
-        self.url='https://es.finance.yahoo.com/quote/RIOT/history/' 
+        self.url='https://es.finance.yahoo.com/quote/RIOT/history/?period1=1459468800&period2=1747018014' 
         self.logger = logger
         if not os.path.exists('./src/recoleccion_de_datos_automaticos/static'):
             os.makedirs('./src/recoleccion_de_datos_automaticos/static', exist_ok=True)
