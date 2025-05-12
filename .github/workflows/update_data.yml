@@ -36,5 +36,16 @@ jobs:
     # Corre el script de main
     - name: Ejecutar Script de main
       run: python src/recoleccion_de_datos_automaticos/main.py
+
+    # Commit y push de los archivos generados
+    - name: Commit and push generated files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/
+        git add logs/
+        git add src/recoleccion_de_datos_automaticos/static/data/riot_data.csv
+        git commit -m "Actualizar archivos de logs, auditoria y csv [skip ci]" || echo "No changes to commit"
+        git push
     
 
