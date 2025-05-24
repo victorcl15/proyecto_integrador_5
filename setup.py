@@ -12,6 +12,7 @@ setup(
         "openpyxl",
         "requests==2.32.3",
         "beautifulsoup4==4.13.3",
-        "scikit-learn>=0.24.0"
+        "scikit-learn>=0.24.0",
+        "joblib>=1.1.0" 
     ]
 ) 
