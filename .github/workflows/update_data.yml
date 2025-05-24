@@ -24,19 +24,28 @@ jobs:
       uses: actions/checkout@v3
 
     # Configura Python
-    - name: Set up Python
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.12'
 
     # Instala las dependencias del proyecto
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r setup.py
+    - name: Instalar dependencias
+      run: pip install -e .
+    
+    # Corre el script de main
+    - name: Ejecutar Script de main
+      run: python src/recoleccion_de_datos_automaticos/main.py
 
-    # Corre el script de logger.py
-    - name: Run Logger script
+    # Commit y push de los archivos generados
+    - name: Commit and push generated files
       run: |
-        python src/recoleccion_de_datos_automaticos/logger.py
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/
+        git add logs/
+        git add src/recoleccion_de_datos_automaticos/static/
+        git commit -m "Actualizar archivos de logs, auditoria y csv [skip ci]" || echo "No changes to commit"
+        git push
+    
 

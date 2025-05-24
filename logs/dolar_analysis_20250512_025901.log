@@ -1,0 +1,4 @@
+[2025-05-12 02:59:01 | DolarAnalysis | Main | main | INFO] Inicializar clase Logger
+[2025-05-12 02:59:03 | DolarAnalysis | Collector | collect_data | INFO] Datos recolectados con éxito. (2291, 7)
+[2025-05-12 02:59:03 | DolarAnalysis | Auditor | audit_extraction | INFO] Informe de auditoría generado: ./docs/audit_2025-05-12_02-59-03.md
+[2025-05-12 02:59:03 | DolarAnalysis | Main | main | INFO] Proceso completado. Informe de auditoría en: ./docs/audit_2025-05-12_02-59-03.md
