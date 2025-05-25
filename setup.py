@@ -13,6 +13,10 @@ setup(
         "requests==2.32.3",
         "beautifulsoup4==4.13.3",
         "scikit-learn>=0.24.0",
-        "joblib>=1.1.0" 
+        "joblib>=1.1.0" ,
+        "streamlit>=1.33.0",
+        "matplotlib>=3.7.0",
+        "seaborn>=0.12.0",
+        "plotly>=5.18.0"
     ]
 ) 
