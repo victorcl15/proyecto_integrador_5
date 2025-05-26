@@ -36,10 +36,6 @@ jobs:
     # Corre el script de main
     - name: Ejecutar Script de main
       run: python src/recoleccion_de_datos_automaticos/main.py
-    
-    # Corre el script de dashboard
-    - name: Ejecutar Script de dashboard
-      run: streamlit run "src/recoleccion_de_datos_automaticos/dashboard.py"
 
     # Commit y push de los archivos generados
     - name: Commit and push generated files
