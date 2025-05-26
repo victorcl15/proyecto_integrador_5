@@ -1,4 +1,4 @@
-# 📊 Análisis Financiero RIOT Blockchain
+# 📊 Análisis Financiero Riot Platforms, Inc. (RIOT)
 
 [![Dashboard](https://img.shields.io/badge/Ver%20Dashboard-Streamlit-FF4B4B)](https://proyectointegrador5.streamlit.app/)
 
