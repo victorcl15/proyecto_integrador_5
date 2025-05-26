@@ -39,6 +39,7 @@ python src/recoleccion_de_datos_automaticos/main.py
 
 # Iniciar el dashboard
 streamlit run src/recoleccion_de_datos_automaticos/dashboard.py
+```
 
 ## 📂 Estructura del Proyecto
 
