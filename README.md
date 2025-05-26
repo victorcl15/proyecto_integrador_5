@@ -29,7 +29,7 @@ Este proyecto implementa un sistema automatizado de recolección, procesamiento,
 
 ```bash
 # Clonar el repositorio
-git clone <url-repositorio>
+git clone https://github.com/victorcl15/proyecto_integrador_5.git
 
 # Instalar dependencias
 pip install -e .
