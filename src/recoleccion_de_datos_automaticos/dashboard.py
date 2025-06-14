@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
+from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 # Cargar los datos
 df = pd.read_csv("src/recoleccion_de_datos_automaticos/static/data/riot_data_enriched.csv")
@@ -94,5 +95,25 @@ fig, ax = plt.subplots()
 sns.heatmap(corr, annot=True, cmap="coolwarm", ax=ax)
 st.pyplot(fig)
 st.markdown("Se observa una alta correlación entre el precio de cierre ajustado, las medias móviles (MA 7 y MA 30), y el retorno acumulado, lo que indica que estas variables se mueven casi en sincronía. Por el contrario, los retornos diarios presentan muy baja correlación con las demás variables, lo que sugiere que sus fluctuaciones son más independientes. Este análisis es útil para identificar relaciones directas entre indicadores y evitar redundancias al seleccionar variables para modelos predictivos o análisis técnico.")
+
+# Cargar los datos con predicciones
+df_pred = pd.read_csv("src/recoleccion_de_datos_automaticos/static/data/riot_data_con_predicciones.csv")
+df_pred['fecha'] = pd.to_datetime(df_pred['fecha'])
+
+# Filtrar datos de predicciones por el mismo rango de fechas
+df_pred_filtrado = df_pred[(df_pred['fecha'] >= pd.to_datetime(fecha_inicio)) & (df_pred['fecha'] <= pd.to_datetime(fecha_fin))]
+
+st.subheader("🔮 Precio Real vs Predicción del Modelo")
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.plot(df_pred_filtrado['fecha'], df_pred_filtrado['cierre_ajustado'], label="Precio Real", linewidth=2, color='blue')
+ax.plot(df_pred_filtrado['fecha'], df_pred_filtrado['prediccion'], label="Predicción", linewidth=2, color='red', linestyle='--')
+ax.set_xlabel("Fecha")
+ax.set_ylabel("Precio ($)")
+ax.legend()
+ax.grid(True, alpha=0.3)
+ax.set_title("Comparación entre Precio Real y Predicciones del Modelo")
+st.pyplot(fig)
+
+st.markdown("El modelo de Random Forest muestra un desempeño notable al seguir de cerca las tendencias principales del precio real de RIOT. Se observa que las predicciones capturan efectivamente los movimientos direccionales y los patrones generales, aunque con cierto desfase en los picos más extremos. La precisión del modelo es especialmente evidente en períodos de menor volatilidad, mientras que en momentos de alta volatilidad las predicciones tienden a ser más conservadoras. Este comportamiento es típico de los modelos de machine learning que priorizan la estabilidad sobre la captura de movimientos extremos.")
 
 
