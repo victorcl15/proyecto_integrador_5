@@ -1,0 +1,18 @@
+[2025-06-14 18:32:42 | DolarAnalysis | Main | main | INFO] Inicializar clase Logger
+[2025-06-14 18:32:46 | DolarAnalysis | Collector | collect_data | INFO] Datos recolectados con éxito. (2291, 7)
+[2025-06-14 18:32:46 | DolarAnalysis | Auditor | audit_extraction | INFO] Informe de auditoría generado: ./docs/audit_2025-06-14_18-32-46.md
+[2025-06-14 18:32:46 | DolarAnalysis | Main | main | INFO] Proceso completado. Informe de auditoría en: ./docs/audit_2025-06-14_18-32-46.md
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] CSV cargado: (2291, 7)
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Fechas convertidas, NaT: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Columna abrir convertida, NaN: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Columna max convertida, NaN: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Columna min convertida, NaN: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Columna cerrar convertida, NaN: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Columna cierre_ajustado convertida, NaN: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Columna volumen convertida, NaN: 1527
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Valores NaN en fecha: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Valores NaN en cierre_ajustado: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Filas eliminadas por NaN: 0
+[2025-06-14 18:32:46 | DolarAnalysis | Cleaning | cargar_y_limpiar | INFO] Datos limpios: (2291, 7)
+[2025-06-14 18:32:46 | DolarAnalysis | Main | main | INFO] Datos enriquecidos y guardados en riot_data_enriched.csv. Filas: 2290
+[2025-06-14 18:32:47 | DolarAnalysis | Main | main | INFO] Modelo entrenado y predicciones guardadas en riot_data_con_predicciones.csv
